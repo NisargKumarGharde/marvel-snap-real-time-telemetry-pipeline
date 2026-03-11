@@ -3,35 +3,35 @@
 This project is an end-to-end, high-throughput data engineering pipeline designed to ingest, process, and analyze live gaming telemetry from Marvel Snap. It demonstrates a modern distributed systems architecture capable of handling high-velocity event streams.
 
 ## 🛠️ The Tech Stack
-Language: Python (FastAPI, Pandas)
+**Language**: Python (FastAPI, Pandas)
 
-Stream Processing: Apache Kafka (Official Docker Image)
+**Stream Processing**: Apache Kafka (Official Docker Image)
 
-NoSQL Database: Apache Cassandra (Distributed data persistence)
+**NoSQL Database**: Apache Cassandra (Distributed data persistence)
 
-Containerization: Docker & Docker Compose
+**Containerization**: Docker & Docker Compose
 
-Analytics: Pandas (In-memory aggregation)
+**Analytics**: Pandas (In-memory aggregation)
 
 ## 🚀 System Design
-Telemetry Producer: A Python service that simulates concurrent match events (card plays, snaps, retreats) and streams them as JSON payloads into a Kafka broker.
+**Telemetry Producer**: A Python service that simulates concurrent match events (card plays, snaps, retreats) and streams them as JSON payloads into a Kafka broker.
 
-Distributed Broker: Apache Kafka serves as the ingestion layer, decoupling the high-velocity game servers from the database to ensure zero data loss.
+**Distributed Broker**: Apache Kafka serves as the ingestion layer, decoupling the high-velocity game servers from the database to ensure zero data loss.
 
-Backend Consumer: A persistent worker service that subscribes to Kafka topics and writes records into Apache Cassandra, using specific partition keys to optimize for time-series queries.
+**Backend Consumer**: A persistent worker service that subscribes to Kafka topics and writes records into Apache Cassandra, using specific partition keys to optimize for time-series queries.
 
-Analytics API: A FastAPI server that utilizes Pandas to extract raw data from Cassandra, performing real-time aggregations to calculate the "Meta" (most played cards) and player aggression (snap rates).
+**Analytics API**: A FastAPI server that utilizes Pandas to extract raw data from Cassandra, performing real-time aggregations to calculate the "Meta" (most played cards) and player aggression (snap rates).
 
 ## 📂 Repository Structure
-snap_producer.py: Simulates live gaming traffic.
+**snap_producer.py**: Simulates live gaming traffic.
 
-snap_consumer.py: Bridges the gap between Kafka and Cassandra.
+**snap_consumer.py**: Bridges the gap between Kafka and Cassandra.
 
-snap_analytics.py: Standalone script for deep analytical dives.
+**snap_analytics.py**: Standalone script for deep analytical dives.
 
-snap_api.py: The REST API serving live JSON metrics.
+**snap_api.py**: The REST API serving live JSON metrics.
 
-docker-compose.yml: Defines the infrastructure environment.
+**docker-compose.yml**: Defines the infrastructure environment.
 
 ## 🚦 Getting Started
 1. Spin up the infrastructure:
