@@ -1,17 +1,35 @@
-# 🎮 Marvel Snap Real-Time Telemetry Pipeline
+# <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ba/0c/25/ba0c2518-1598-ce89-03e6-ee2a12997ed4/Placeholder.mill/400x400bb-75.webp" height="40" align="absmiddle" /> Marvel Snap Real-Time Telemetry Pipeline
 ## 🏗️ Architecture Overview
 This project is an end-to-end, high-throughput data engineering pipeline designed to ingest, process, and analyze live gaming telemetry from Marvel Snap. It demonstrates a modern distributed systems architecture capable of handling high-velocity event streams.
 
 ## 🛠️ The Tech Stack
-**Language**: Python (FastAPI, Pandas)
 
-**Stream Processing**: Apache Kafka (Official Docker Image)
+<p align="left">
+  <strong>Language :</strong> &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height="48" align="absmiddle" alt="Python" title="Python" />
+  &nbsp; 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" height="48" align="absmiddle" alt="FastAPI" title="FastAPI" />
+</p>
 
-**NoSQL Database**: Apache Cassandra (Distributed data persistence)
+<p align="left">
+       <strong>Stream Processing :</strong> &nbsp;
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" height="48" align="absmiddle" alt="Apache Kafka" title="Apache Kafka" />
+</p>
 
-**Containerization**: Docker & Docker Compose
+<p align="left">
+       <strong>NoSQL Database :</strong> &nbsp;
+       <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg" height="48" align="absmiddle" alt="Apache Cassandra" title="Apache Cassandra" />
+</p>
 
-**Analytics**: Pandas (In-memory aggregation)
+<p align="left">
+       <strong>Containerization :</strong> &nbsp;
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" height="48" align="absmiddle" alt="Docker" title="Docker" />
+</p>
+
+<p align="left">
+       <strong>Analytics :</strong> &nbsp;
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" height="48" align="absmiddle" alt="Pandas" title="Pandas" />
+</p>
 
 ## 🚀 System Design
 **Telemetry Producer**: A Python service that simulates concurrent match events (card plays, snaps, retreats) and streams them as JSON payloads into a Kafka broker.
